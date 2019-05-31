@@ -80,7 +80,7 @@ describe('Solar', function() {
     let daysAlive = userTest.getDaysAlive();
     let mercuryDays = userTest.convertEarthDaysToOtherPlanetDays("Mercury", daysAlive);
     let mercuryYearsOld = userTest.getOtherPlanetYearsOld(mercuryDays);
-    let mercuryLifeExpectancy = getPlanetLifeExpectancy("Mercury");
+    let mercuryLifeExpectancy = userTest.getPlanetLifeExpectancy("Mercury");
     userTest.checkLifeExpectancy(mercuryYearsOld, mercuryLifeExpectancy);
-  })
+  });
 });

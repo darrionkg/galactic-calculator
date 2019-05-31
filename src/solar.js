@@ -48,4 +48,7 @@ export class Solar {
     return averageEarthExpectancy * rate;
   }
 
+  checkLifeExpectancy(planetAge, planetLifeExpectancy) {
+    return planetLifeExpectancy - planetAge;
+  }
 }
