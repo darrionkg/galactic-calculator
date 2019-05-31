@@ -17,7 +17,17 @@ export class Solar {
 
     return yearsToDays + monthsToDays + currentDateDifference;
   }
-
+  convertEarthDaysToOtherPlanetDays(planet, daysAlive) {
+    if(planet === "Mercury") {
+      return daysAlive * .24
+    } else if(planet === "Venus") {
+      return daysAlive * .62
+    } else if(planet === "Mars") {
+      return daysAlive * 1.88
+    } else if(planet === "Jupiter") {
+      return daysAlive * 11.86
+    }
+  }
 
   getMercuryAge() {
     let mercuryYearBorn = this.birthDay.getFullYear()
