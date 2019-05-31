@@ -1,11 +1,11 @@
-# _Salon Shop_
+# _Galactic Calculator_
 
-#### _Website for Darrion's Salon, 05/10/2019_
+#### _Website for a galactic calculator, 05/10/2019_
 
 #### By _**Darrion Gering**_
 
 ## Description
-
+_This website calculates What your age is on another planet!_
 
 ## Setup/Installation Requirements
 
