@@ -1,4 +1,6 @@
 import { Solar } from './solar';
+import './styles.css'
+import Background from './background.jpg';
 
 $(document).ready(function() {
   $('#calculate').submit(function(event) {
@@ -21,5 +23,7 @@ $(document).ready(function() {
     let jupiterAge = newCalculation.getOtherPlanetYearsOld(jupiterDays);
 
     $('#output').text('Your age on Mercury: ' +mercuryAge+ ' Your age on Venus: ' +venusAge+ ' Your age on Mars: ' +marsAge+ ' Your age on Jupiter: ' +jupiterAge);
+
+    $('#lifeExpectancy').text('')
   });
 });

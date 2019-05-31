@@ -53,6 +53,12 @@ module.exports = {
                 ]
             },
             {
+              test: /\.(png|svg|jpg|gif)$/,
+              use: [
+                'file-loader'
+              ]
+            },
+            {
                 //Rules for linter
                 test: /\.js$/,
                 exclude: /node_modules/,
