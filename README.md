@@ -11,8 +11,9 @@ _This website calculates What your age is on another planet!_
 
 1. _Clone from GitHub_
 2. _$cd GalacticCalculator_
-3. _type npm install to install packages
-4. _dotnet test to ensure code tests work correctly_
+3. _type npm install to install packages_
+4. _npm test to ensure code tests work correctly_
+5. _npm start to start the webserver and launch the site_
 
 
 ## Specs
