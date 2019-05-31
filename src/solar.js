@@ -49,6 +49,11 @@ export class Solar {
   }
 
   checkLifeExpectancy(planetAge, planetLifeExpectancy) {
-    return Math.floor(planetLifeExpectancy - planetAge);
+    if(planetAge < planetLifeExpectancy) {
+      return Math.floor(planetLifeExpectancy - planetAge);
+    } else if(planetAge > planetLifeExpectancy) {
+      return Math.floor(planetAge - planetLifeExpectancy);
+    }
+
   }
 }

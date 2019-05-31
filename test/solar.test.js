@@ -91,6 +91,6 @@ describe('Solar', function() {
     let mercuryYearsOld = userTest2.getOtherPlanetYearsOld(mercuryDays);
     let mercuryLifeExpectancy = userTest2.getPlanetLifeExpectancy("Mercury");
     userTest2.checkLifeExpectancy(mercuryYearsOld, mercuryLifeExpectancy);
-    expect(userTest2.checkLifeExpectancy(mercuryYearsOld, mercuryLifeExpectancy)).toEqual(12);
+    expect(userTest2.checkLifeExpectancy(mercuryYearsOld, mercuryLifeExpectancy)).toEqual(8);
   });
 });
