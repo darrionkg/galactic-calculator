@@ -46,6 +46,19 @@ describe('Solar', function() {
     expect(userTest.getOtherPlanetYearsOld(mercuryDays)).toEqual(5);
   });
 
-
-
+  it('gets Venus age', function() {
+    let daysAlive = userTest.getDaysAlive();
+    let venusDays = userTest.convertEarthDaysToOtherPlanetDays("Venus", daysAlive);
+    expect(userTest.getOtherPlanetYearsOld(venusDays)).toEqual(14);
+  });
+  it('gets Mars age', function() {
+    let daysAlive = userTest.getDaysAlive();
+    let marsDays = userTest.convertEarthDaysToOtherPlanetDays("Mars", daysAlive);
+    expect(userTest.getOtherPlanetYearsOld(marsDays)).toEqual(44);
+  });
+  it('gets Jupiter age', function() {
+    let daysAlive = userTest.getDaysAlive();
+    let jupiterDays = userTest.convertEarthDaysToOtherPlanetDays("Jupiter", daysAlive);
+    expect(userTest.getOtherPlanetYearsOld(jupiterDays)).toEqual(283);
+  });
 });
