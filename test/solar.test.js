@@ -74,6 +74,13 @@ describe('Solar', function() {
     expect(userTest.getPlanetLifeExpectancy("Venus")).toEqual(44.33);
     expect(userTest.getPlanetLifeExpectancy("Mars")).toEqual(134.42);
     expect(userTest.getPlanetLifeExpectancy("Jupiter")).toEqual(847.99);
-
   });
+
+  it('finds years until life expectancy', function() {
+    let daysAlive = userTest.getDaysAlive();
+    let mercuryDays = userTest.convertEarthDaysToOtherPlanetDays("Mercury", daysAlive);
+    let mercuryYearsOld = userTest.getOtherPlanetYearsOld(mercuryDays);
+    let mercuryLifeExpectancy = getPlanetLifeExpectancy("Mercury");
+    userTest.checkLifeExpectancy(mercuryYearsOld, mercuryLifeExpectancy);
+  })
 });
