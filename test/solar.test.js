@@ -24,28 +24,26 @@ describe('Solar', function() {
 
   it('converts earth to Venus days', function() {
     let daysAlive = userTest.getDaysAlive();
-    let mercuryDaysAlive = userTest.convertEarthDaysToOtherPlanetDays("Venus", daysAlive);
-    expect(mercuryDaysAlive).toEqual(daysAlive * .62);
+    let venusDaysAlive = userTest.convertEarthDaysToOtherPlanetDays("Venus", daysAlive);
+    expect(venusDaysAlive).toEqual(daysAlive * .62);
   });
 
   it('converts earth to Mars days', function() {
     let daysAlive = userTest.getDaysAlive();
-    let mercuryDaysAlive = userTest.convertEarthDaysToOtherPlanetDays("Mars", daysAlive);
-    expect(mercuryDaysAlive).toEqual(daysAlive * 1.88);
+    let marsDaysAlive = userTest.convertEarthDaysToOtherPlanetDays("Mars", daysAlive);
+    expect(marsDaysAlive).toEqual(daysAlive * 1.88);
   });
 
   it('converts earth to Jupiter days', function() {
     let daysAlive = userTest.getDaysAlive();
-    let mercuryDaysAlive = userTest.convertEarthDaysToOtherPlanetDays("Jupiter", daysAlive);
-    expect(mercuryDaysAlive).toEqual(daysAlive * 11.86);
+    let jupiterDaysAlive = userTest.convertEarthDaysToOtherPlanetDays("Jupiter", daysAlive);
+    expect(jupiterDaysAlive).toEqual(daysAlive * 11.86);
   });
 
-  it('gets Mercury age with just year calc', function() {
-    let mercuryAge = userTest.getMercuryAge();
-    let current = new Date();
-    console.log(mercuryAge);
-    console.log(current)
-    expect(mercuryAge).toEqual(5.76);
+  it('gets Mercury age', function() {
+    let daysAlive = userTest.getDaysAlive();
+    let mercuryDays = userTest.convertEarthDaysToOtherPlanetDays("Mercury", daysAlive);
+    expect(userTest.getMercuryAge(mercuryDays)).toEqual(5);
   });
 
 
