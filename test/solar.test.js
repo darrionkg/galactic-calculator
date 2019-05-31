@@ -51,14 +51,29 @@ describe('Solar', function() {
     let venusDays = userTest.convertEarthDaysToOtherPlanetDays("Venus", daysAlive);
     expect(userTest.getOtherPlanetYearsOld(venusDays)).toEqual(14);
   });
+
   it('gets Mars age', function() {
     let daysAlive = userTest.getDaysAlive();
     let marsDays = userTest.convertEarthDaysToOtherPlanetDays("Mars", daysAlive);
     expect(userTest.getOtherPlanetYearsOld(marsDays)).toEqual(44);
   });
+
   it('gets Jupiter age', function() {
     let daysAlive = userTest.getDaysAlive();
     let jupiterDays = userTest.convertEarthDaysToOtherPlanetDays("Jupiter", daysAlive);
     expect(userTest.getOtherPlanetYearsOld(jupiterDays)).toEqual(283);
+  });
+
+  it('determines other plants average life expectancy', function() {
+    let daysAlive = userTest.getDaysAlive();
+    let mercuryDays = userTest.convertEarthDaysToOtherPlanetDays("Mercury", daysAlive);
+    let venusDays = userTest.convertEarthDaysToOtherPlanetDays("Venus", daysAlive);
+    let marsDays = userTest.convertEarthDaysToOtherPlanetDays("Mars", daysAlive);
+    let jupiterDays = userTest.convertEarthDaysToOtherPlanetDays("Jupiter", daysAlive);
+    expect(userTest.getPlanetLifeExpectancy("Mercury")).toEqual(17.16);
+    expect(userTest.getPlanetLifeExpectancy("Venus")).toEqual(44.33);
+    expect(userTest.getPlanetLifeExpectancy("Mars")).toEqual(134.42);
+    expect(userTest.getPlanetLifeExpectancy("Jupiter")).toEqual(847.99);
+
   });
 });

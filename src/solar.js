@@ -33,5 +33,19 @@ export class Solar {
     return Math.floor(days / 365);
   }
 
+  getPlanetLifeExpectancy(planet) {
+    const averageEarthExpectancy = 71.5;
+    let rate;
+    if(planet === "Mercury") {
+      rate = .24;
+    } else if(planet === "Venus") {
+      rate = .62;
+    } else if(planet === "Mars") {
+      rate = 1.88;
+    } else if(planet === "Jupiter") {
+      rate = 11.86;
+    }
+    return averageEarthExpectancy * rate;
+  }
 
 }
