@@ -81,6 +81,16 @@ describe('Solar', function() {
     let mercuryDays = userTest.convertEarthDaysToOtherPlanetDays("Mercury", daysAlive);
     let mercuryYearsOld = userTest.getOtherPlanetYearsOld(mercuryDays);
     let mercuryLifeExpectancy = userTest.getPlanetLifeExpectancy("Mercury");
-    userTest.checkLifeExpectancy(mercuryYearsOld, mercuryLifeExpectancy);
+    expect(userTest.checkLifeExpectancy(mercuryYearsOld, mercuryLifeExpectancy)).toEqual(12);
+  });
+
+  it('finds years past', function() {
+    let userTest2 = new Solar('July 11, 1910');
+    let daysAlive = userTest2.getDaysAlive();
+    let mercuryDays = userTest2.convertEarthDaysToOtherPlanetDays("Mercury", daysAlive);
+    let mercuryYearsOld = userTest2.getOtherPlanetYearsOld(mercuryDays);
+    let mercuryLifeExpectancy = userTest2.getPlanetLifeExpectancy("Mercury");
+    userTest2.checkLifeExpectancy(mercuryYearsOld, mercuryLifeExpectancy);
+    expect(userTest2.checkLifeExpectancy(mercuryYearsOld, mercuryLifeExpectancy)).toEqual(12);
   });
 });
