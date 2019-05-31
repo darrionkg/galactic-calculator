@@ -29,14 +29,8 @@ export class Solar {
     }
   }
 
-  getMercuryAge() {
-    let mercuryYearBorn = this.birthDay.getFullYear()
-    let mercuryYearAge = this.currentDate.getFullYear() - mercuryYearBorn;
-    console.log(mercuryYearAge);
-    let result = mercuryYearAge * .24
-    console.log(result);
-    // using date format (year, month, day)
-    return result;
+  getOtherPlanetYearsOld(days) {
+    return Math.floor(days / 365);
   }
 
 

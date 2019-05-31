@@ -43,7 +43,7 @@ describe('Solar', function() {
   it('gets Mercury age', function() {
     let daysAlive = userTest.getDaysAlive();
     let mercuryDays = userTest.convertEarthDaysToOtherPlanetDays("Mercury", daysAlive);
-    expect(userTest.getMercuryAge(mercuryDays)).toEqual(5);
+    expect(userTest.getOtherPlanetYearsOld(mercuryDays)).toEqual(5);
   });
 
 
