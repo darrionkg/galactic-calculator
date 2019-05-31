@@ -1,1 +1,7 @@
-
+body {
+  background-image: url(./img/background.jpg);
+  color: white;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-size: cover;
+}

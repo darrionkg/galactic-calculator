@@ -1,9 +1,6 @@
 export class Solar {
   constructor(birthDay) {
     this.birthDay = new Date(birthDay);
-    //this.year = birthDay.getFullYear();
-    // this.month = birthDay.getMonth();
-    // this.day = birthDay.getDate();
     this.currentDate = new Date();
   }
 
@@ -53,6 +50,8 @@ export class Solar {
       return Math.floor(planetLifeExpectancy - planetAge);
     } else if(planetAge > planetLifeExpectancy) {
       return Math.floor(planetAge - planetLifeExpectancy);
+    } else if(planetAge === planetAgeExpectancy) {
+      return 0;
     }
 
   }
