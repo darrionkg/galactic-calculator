@@ -16,13 +16,13 @@ export class Solar {
   }
   convertEarthDaysToOtherPlanetDays(planet, daysAlive) {
     if(planet === "Mercury") {
-      return daysAlive * .24
+      return daysAlive * .24;
     } else if(planet === "Venus") {
-      return daysAlive * .62
+      return daysAlive * .62;
     } else if(planet === "Mars") {
-      return daysAlive * 1.88
+      return daysAlive * 1.88;
     } else if(planet === "Jupiter") {
-      return daysAlive * 11.86
+      return daysAlive * 11.86;
     }
   }
 
@@ -42,15 +42,16 @@ export class Solar {
     } else if(planet === "Jupiter") {
       rate = 11.86;
     }
-    return averageEarthExpectancy * rate;
+    return Math.floor(averageEarthExpectancy * rate);
   }
 
   checkLifeExpectancy(planetAge, planetLifeExpectancy) {
+
     if(planetAge < planetLifeExpectancy) {
       return Math.floor(planetLifeExpectancy - planetAge);
     } else if(planetAge > planetLifeExpectancy) {
       return Math.floor(planetAge - planetLifeExpectancy);
-    } else if(planetAge === planetAgeExpectancy) {
+    } else if(planetAge === planetLifeExpectancy) {
       return 0;
     }
 

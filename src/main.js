@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { Solar } from 'solar.js'
+import { Solar } from 'solar.js';
 
 $(document).ready(function() {
   $('#calculate').submit(function(event) {

@@ -70,10 +70,10 @@ describe('Solar', function() {
     let venusDays = userTest.convertEarthDaysToOtherPlanetDays("Venus", daysAlive);
     let marsDays = userTest.convertEarthDaysToOtherPlanetDays("Mars", daysAlive);
     let jupiterDays = userTest.convertEarthDaysToOtherPlanetDays("Jupiter", daysAlive);
-    expect(userTest.getPlanetLifeExpectancy("Mercury")).toEqual(17.16);
-    expect(userTest.getPlanetLifeExpectancy("Venus")).toEqual(44.33);
-    expect(userTest.getPlanetLifeExpectancy("Mars")).toEqual(134.42);
-    expect(userTest.getPlanetLifeExpectancy("Jupiter")).toEqual(847.99);
+    expect(userTest.getPlanetLifeExpectancy("Mercury")).toEqual(17);
+    expect(userTest.getPlanetLifeExpectancy("Venus")).toEqual(44);
+    expect(userTest.getPlanetLifeExpectancy("Mars")).toEqual(134);
+    expect(userTest.getPlanetLifeExpectancy("Jupiter")).toEqual(847);
   });
 
   it('finds years until life expectancy', function() {
@@ -91,11 +91,11 @@ describe('Solar', function() {
     let mercuryYearsOld = userTest2.getOtherPlanetYearsOld(mercuryDays);
     let mercuryLifeExpectancy = userTest2.getPlanetLifeExpectancy("Mercury");
     userTest2.checkLifeExpectancy(mercuryYearsOld, mercuryLifeExpectancy);
-    expect(userTest2.checkLifeExpectancy(mercuryYearsOld, mercuryLifeExpectancy)).toEqual(8);
+    expect(userTest2.checkLifeExpectancy(mercuryYearsOld, mercuryLifeExpectancy)).toEqual(9);
   });
 
   it('finds years if equal', function() {
-    let userTest2 = new Solar('July 11, 1940');
+    let userTest2 = new Solar('July 11, 1946');
     let daysAlive = userTest2.getDaysAlive();
     let mercuryDays = userTest2.convertEarthDaysToOtherPlanetDays("Mercury", daysAlive);
     let mercuryYearsOld = userTest2.getOtherPlanetYearsOld(mercuryDays);
