@@ -6,15 +6,16 @@ describe('Solar', function() {
     expect(userTest.birthDay.getFullYear()).toEqual(2014);
     expect(userTest.birthDay.getMonth()).toEqual(9);
     expect(userTest.birthDay.getDate()).toEqual(13);
-
-    it('gets Mercury age', function() {
-      let userTest = new Solar('July 11, 1995');
-      mercuryAge = userTest.getMercuryAge();
-      expect(mercuryAge.getFullYear()).toEqual(1995);
-      expect(mercuryAge.getMonth()).toEqual(6);
-      expect(mercuryAge.getDate()).toEqual(11);
   });
 
+  it('gets Mercury age with just year calc', function() {
+    let userTest = new Solar('July 11, 1995');
+    let mercuryAge = userTest.getMercuryAge();
+    let current = new Date();
+    console.log(mercuryAge);
+    console.log(current)
+    expect(mercuryAge).toEqual(5.76);
+  });
 
 
 });
